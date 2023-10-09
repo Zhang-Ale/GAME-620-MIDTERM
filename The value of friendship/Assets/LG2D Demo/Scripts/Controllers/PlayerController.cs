@@ -46,14 +46,14 @@ public class PlayerController : MonoBehaviour
         if (platformer)
         {
             body2D.velocity = new Vector2(movement.x * speed, body2D.velocity.y);
-            animator.SetFloat(HorizontalSpeedAnimatorParameter, Mathf.Abs(body2D.velocity.x));
-            animator.SetFloat(VerticalSpeedAnimatorParameter, Mathf.Abs(body2D.velocity.y));
+            //animator.SetFloat(HorizontalSpeedAnimatorParameter, Mathf.Abs(body2D.velocity.x));
+            //animator.SetFloat(VerticalSpeedAnimatorParameter, Mathf.Abs(body2D.velocity.y));
         }
         else
         {
             body2D.velocity = movement * speed;
-            animator.SetFloat(HorizontalSpeedAnimatorParameter, Mathf.Sqrt(Mathf.Abs(body2D.velocity.x) + Mathf.Abs(body2D.velocity.y)));
-            animator.SetFloat(VerticalSpeedAnimatorParameter, 0);
+            //animator.SetFloat(HorizontalSpeedAnimatorParameter, Mathf.Sqrt(Mathf.Abs(body2D.velocity.x) + Mathf.Abs(body2D.velocity.y)));
+            //animator.SetFloat(VerticalSpeedAnimatorParameter, 0);
         }
         if (platformer && Input.GetButtonDown(InputJump))
         {

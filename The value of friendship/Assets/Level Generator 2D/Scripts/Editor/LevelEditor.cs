@@ -17,9 +17,8 @@
         private const string WallThicknessTooltip = "This determines how thick the walls will be";
         private const string DoorSizeLabel = "Door Size";
         private const string DoorSizeTooltip = "This determines the size of the opening on the doors by changing the size of gaps in the walls.";
-        private const float MinDoorSize = 1.0f;
+        private const float MinDoorSize = 0.0f;
         private const float MaxDoorSize = 5.0f;
-        float doorSize; 
 
         public override void OnInspectorGUI()
         {

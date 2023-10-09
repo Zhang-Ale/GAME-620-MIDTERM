@@ -360,22 +360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 434575777}
     m_Modifications:
-    - target: {fileID: 428118, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8554686
-      objectReference: {fileID: 0}
-    - target: {fileID: 428118, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 428118, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 428118, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 491632, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -408,9 +392,5 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 21229176, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fca784bb49fcdb04bafb130e9e8e8e3a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff072c3d390516a4e9fc7d6840453f27, type: 3}
