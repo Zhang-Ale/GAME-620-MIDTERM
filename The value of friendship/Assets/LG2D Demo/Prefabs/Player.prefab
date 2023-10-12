@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6b7f8311a286445aed67587a6053bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
   platformer: 0
   speed: 5
   jump: 5

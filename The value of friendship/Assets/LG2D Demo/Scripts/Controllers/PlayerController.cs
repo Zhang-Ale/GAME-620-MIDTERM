@@ -7,6 +7,7 @@
 [RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gm;
     private const string InputHorizontalMovement = "Horizontal";
     private const string InputVerticalMovement = "Vertical";
     private const string InputJump = "Jump";
