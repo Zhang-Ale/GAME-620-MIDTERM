@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public EventObserver eo;
 
     public TMP_Text scoreText;
+    public TMP_Text timerText;
 
     public GameObject mainMusicObject;
     public AudioSource mainMusic;

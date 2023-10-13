@@ -11,6 +11,8 @@ public class UI : MonoBehaviour
     public TMP_Text timerDisplay;
     public TMP_Text XPDisplay;
     public TMP_Text winDisplay;
+    private int minutes;
+    private int seconds;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +23,14 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerDisplay.text = gm.timer.ToString("0");
-        XPDisplay.text = "Score: " + gm.XP.ToString("0");
+        minutes = (int)gm.timer / 60;
+        seconds = (int)gm.timer % 60;
+        timerDisplay.text = minutes.ToString("0") + ':' + seconds.ToString("0");
+        XPDisplay.text = "XP: " + gm.XP.ToString("0");
 
         //if (gm.timer <= 0)
         {
-            //The game is over, display something on winDisplay
+            //The game is over, maybe display something on winDisplay
         }
     }
 }
