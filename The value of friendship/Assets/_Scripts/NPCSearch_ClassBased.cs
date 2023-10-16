@@ -11,11 +11,14 @@ public class NPCSearch_ClassBased : MonoBehaviour
     private INPCState currentState;
 
     public WanderState wanderState = new WanderState();
+    public NPCFollowState followState = new NPCFollowState();
+    public bool startFollow;
+    public GameObject[] friend; 
 
     public NavMeshAgent navAgent;
-
+    public int ran; 
     public Vector3 nextLocation;
-
+    public Transform target;
     public float wanderDistance = 10f;
     public float pickUpDistance = 25f;
 
@@ -34,11 +37,19 @@ public class NPCSearch_ClassBased : MonoBehaviour
         currentStateName = currentState.ToString();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            //Change this object to a friend
+            startFollow = true;
         }
+    }
+
+    public void SpawnFriend()
+    {
+        ran = Random.Range(0, friend.Length);
+        GameObject friendToSpawn = friend[ran]; 
+        Instantiate(friendToSpawn, transform.position, Quaternion.identity); 
+        Destroy(this.gameObject); 
     }
 }

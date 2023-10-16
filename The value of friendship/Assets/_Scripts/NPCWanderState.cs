@@ -13,15 +13,10 @@ public class WanderState : INPCState
         }
 
         DoWander(npc);
-
-        /*
-        if (CanSeeCritter(npc))
-            return npc.attackState;
-        else if (CanSeePickUp(npc))
-            return npc.collectState;
+        if (npc.startFollow)
+            return npc.followState;
         else
-        */
-        return npc.wanderState;
+            return npc.wanderState;
     }
 
     private void DoWander(NPCSearch_ClassBased npc)

@@ -159,7 +159,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateName: 
+  startFollow: 0
+  friend:
+  - {fileID: 7405888691048577543, guid: 0bf215826707742d38e9f6d2076c9d98, type: 3}
+  - {fileID: 3404255280999730740, guid: e4476907346604e469286d7a3fcd4058, type: 3}
   navAgent: {fileID: 0}
+  ran: 0
   nextLocation: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
   wanderDistance: 10
   pickUpDistance: 25
