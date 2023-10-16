@@ -27,10 +27,13 @@ public class GameManager : MonoBehaviour
     public GameObject mainMusicObject;
     public AudioSource mainMusic;
 
+    public float totalMultiplier;
+
     // Start is called before the first frame update
     void Start()
     {
         timer = timerDuration;
+        totalMultiplier = 1.0f;
 
         for (int i = 0; i < numObjects; ++i)
         {
