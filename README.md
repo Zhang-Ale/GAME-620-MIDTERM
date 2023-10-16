@@ -1,7 +1,7 @@
 # GAME-620-MIDTERM
 
 **Team:**
-*Linden Killam
+*Linden Killam, 
 *Hongcheng Zhang
 
 **Name:**
