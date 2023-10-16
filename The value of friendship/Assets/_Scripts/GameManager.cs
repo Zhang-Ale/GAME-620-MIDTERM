@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         if (timer > 0)
             timer -= Time.deltaTime;
 
-        if (timer > 45)
+        if (timer < 315)
         {
             BC.changeCol = false;
             video.SetActive(true);

@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Range(0.0f, 10.0f)]
     private float jump = 5.0f;
+    public GameObject part; 
 
     private Rigidbody2D body2D;
     private Animator animator;
@@ -80,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "LifeXPSphere")
         {
             gm.XP+= 10;
-            //do something flashy maybe?
+            Instantiate(part, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
         }
     }
