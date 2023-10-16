@@ -9,9 +9,10 @@ public class FollowTarget : MonoBehaviour
     NavMeshAgent agent;
     public bool startFollow; 
 
+
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+        target = GameObject.Find("FollowPos").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false; 
