@@ -15,7 +15,7 @@ public class EventObserver : MonoBehaviour
     {
         if (gm.timer > 0)
         {
-            gm.XP += 1; //Adjust this later for friends, etc.
+            gm.XP += 1.0f * 1.0f;//friend value;
         }
     }
 }

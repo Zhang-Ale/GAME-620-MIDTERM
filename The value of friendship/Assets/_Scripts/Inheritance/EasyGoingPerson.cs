@@ -7,11 +7,13 @@ public class EasyGoingPerson : People
     {
         this.location = strangerLocation;
         this.stayTimeValue = Random.Range(10f, 30f);
+        this.multiplier = 1.1f;
     }
 
     EasyGoingPerson()
     {
         this.location = new Vector3();
         this.stayTimeValue = Random.Range(10f, 30f);
+        this.multiplier = 1.1f;
     }
 }

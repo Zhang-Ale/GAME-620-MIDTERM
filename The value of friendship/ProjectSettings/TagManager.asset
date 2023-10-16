@@ -8,6 +8,7 @@ TagManager:
   - Stranger
   - EasyGoingFriend
   - HardFriend
+  - LifeXPSphere
   layers:
   - Default
   - TransparentFX

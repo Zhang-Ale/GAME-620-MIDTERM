@@ -14,7 +14,7 @@ public class CollectionNotifier : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (OnXPCollected != null) // check if anyone subscribed to this event
+        if (other.tag == "LifeXPSphere" && OnXPCollected != null) // check if anyone subscribed to this event
         {
             OnXPCollected(); // run the event on all subscribers
         }

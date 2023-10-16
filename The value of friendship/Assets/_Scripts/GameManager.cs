@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public const int numStrangers = 1000;
     public float timer = 0f;
     public float timerDuration = 360f;
-    public int XP = 0;
+    public float XP = 0f;
 
     public PlayerController player;
     public UI ui;
