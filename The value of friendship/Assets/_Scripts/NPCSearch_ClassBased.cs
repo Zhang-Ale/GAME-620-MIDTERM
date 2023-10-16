@@ -45,11 +45,12 @@ public class NPCSearch_ClassBased : MonoBehaviour
         }
     }
 
-    public void SpawnFriend()
+    public void SpawnFriend(Transform parent)
     {
         ran = Random.Range(0, friend.Length);
         GameObject friendToSpawn = friend[ran]; 
-        Instantiate(friendToSpawn, transform.position, Quaternion.identity); 
+        Instantiate(friendToSpawn, transform.position, Quaternion.identity);
+        
         Destroy(this.gameObject); 
     }
 }

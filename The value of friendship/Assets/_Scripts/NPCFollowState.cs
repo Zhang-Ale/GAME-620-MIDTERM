@@ -33,7 +33,7 @@ public class NPCFollowState : INPCState
             if (NavMesh.SamplePosition(npc.target.position, out NavMeshHit hit, 5f, NavMesh.AllAreas))
             {
                 npc.navAgent.speed = 0;
-                npc.SpawnFriend(); 
+                npc.SpawnFriend(npc.target); 
             }
         }
     }
