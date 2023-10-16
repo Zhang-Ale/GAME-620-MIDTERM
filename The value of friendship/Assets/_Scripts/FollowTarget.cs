@@ -9,7 +9,6 @@ public class FollowTarget : MonoBehaviour
     NavMeshAgent agent;
     public bool startFollow; 
 
-
     void Start()
     {
         target = GameObject.Find("FollowPos").transform;
@@ -23,6 +22,9 @@ public class FollowTarget : MonoBehaviour
         if (startFollow)
         {
             agent.SetDestination(target.position); 
+            //ignore player's and friends' collision
         }
+
+        //upon touching the player, ignore 
     }
 }

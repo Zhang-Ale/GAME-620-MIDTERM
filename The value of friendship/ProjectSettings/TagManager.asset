@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Fire
   - LifeXPSphere
+  - EasyGoingFriend
+  - HardFriend
+  - Stranger
+  - Wall
   layers:
   - Default
   - TransparentFX
