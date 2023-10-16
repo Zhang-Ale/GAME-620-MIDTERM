@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject wall1;
     public GameObject wall;
     public const int numObjects = 2000;
-    public const int numStrangers = 20;
+    public const int numStrangers = 1000;
     public float timer = 0f;
     public float timerDuration = 360f;
     public int XP = 0;

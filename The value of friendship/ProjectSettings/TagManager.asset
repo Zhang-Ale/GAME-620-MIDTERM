@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Fire
-  - LifeXPSphere
-  - EasyGoingFriend
-  - HardFriend
-  - Stranger
-  - Wall
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -46,13 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: MG_Ground
-    uniqueID: 42246
-    locked: 0
-  - name: MG_Water
-    uniqueID: 48086
-    locked: 0
-  - name: MG_Objects
-    uniqueID: 54182
     locked: 0
