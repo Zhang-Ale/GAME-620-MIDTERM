@@ -61,6 +61,11 @@ public class PlayerController : MonoBehaviour
         {
             body2D.velocity = new Vector2(body2D.velocity.x, jump);
         }
+
+        if (gm._gameOver)
+        {
+            speed = 0f; 
+        }
     }
 
     void OnValidate()

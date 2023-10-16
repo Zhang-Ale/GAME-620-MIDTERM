@@ -24,7 +24,7 @@ public class HardFriend : People
 
     private void Update()
     {
-        Transform playerTrans = GameObject.Find("FollowPos").transform;
+        Transform playerTrans = GameObject.Find("FollowPosHard").transform;
         //SetParent(playerTrans); 
     }
 }

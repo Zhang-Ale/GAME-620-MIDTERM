@@ -24,7 +24,7 @@ public class EasyGoingPerson : People
 
     private void Update()
     {
-        Transform playerTrans = GameObject.Find("FollowPos").transform;
+        Transform playerTrans = GameObject.Find("FollowPosEasy").transform;
         //SetParent(playerTrans);
     }
 }

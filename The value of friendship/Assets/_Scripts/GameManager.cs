@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
     public float timer = 0f;
     public float timerDuration = 360f;
     public float XP = 0f;
-    public GameObject video; 
+    public GameObject video;
+    public GameObject gameOver;
+    public bool _gameOver;
 
     public PlayerController player;
     public UI ui;
@@ -58,10 +60,16 @@ public class GameManager : MonoBehaviour
         if (timer > 0)
             timer -= Time.deltaTime;
 
-        if (timer < 315)
+        if (timer < 30)
         {
             BC.changeCol = false;
             video.SetActive(true);
+        }
+
+        if(timer == 0)
+        {
+            gameOver.SetActive(true);
+            _gameOver = true; 
         }
     }
 }
