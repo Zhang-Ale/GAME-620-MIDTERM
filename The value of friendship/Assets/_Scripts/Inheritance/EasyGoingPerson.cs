@@ -2,19 +2,24 @@ using UnityEngine;
 
 public class EasyGoingPerson : People
 {
-    //Should pass in stranger's location when creating new friend
-    EasyGoingPerson(Vector3 strangerLocation)
+    public static float stayTimeValueMin = 10.0f;
+    public static float stayTimeValueMax = 30.0f;
+    public static float multiplier = 1.1f;
+
+    EasyGoingPerson(Vector3 strangerLocation, float randomValue)
     {
         this.location = strangerLocation;
-        this.stayTimeValue = Random.Range(10f, 30f);
-        this.multiplier = 1.1f;
+        this.stayTimeValue = randomValue;
     }
 
-    EasyGoingPerson()
+    EasyGoingPerson(float randomValue)
     {
-        this.location = new Vector3();
-        this.stayTimeValue = Random.Range(10f, 30f);
-        this.multiplier = 1.1f;
+        this.stayTimeValue = randomValue;
+    }
+
+    EasyGoingPerson(float randomValue)
+    {
+        this.stayTimeValue = 20.0f; //Temporary solution
     }
 
     private void Update()

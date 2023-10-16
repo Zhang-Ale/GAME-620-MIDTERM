@@ -13,10 +13,12 @@ public class NPCSearch_ClassBased : MonoBehaviour
     public WanderState wanderState = new WanderState();
     public NPCFollowState followState = new NPCFollowState();
     public bool startFollow;
-    public GameObject[] friend; 
+    public GameObject[] friend;
+    public GameObject newObject;
 
     public NavMeshAgent navAgent;
-    public int ran; 
+    public int ran;
+    public float random;
     public Vector3 nextLocation;
     public Transform target;
     public float wanderDistance = 10f;
@@ -48,8 +50,9 @@ public class NPCSearch_ClassBased : MonoBehaviour
     public void SpawnFriend(Transform parent)
     {
         ran = Random.Range(0, friend.Length);
-        GameObject friendToSpawn = friend[ran]; 
-        Instantiate(friendToSpawn, transform.position, Quaternion.identity);
+        GameObject friendToSpawn = friend[ran];
+        //random = Random.Range(friendToSpawn.stayValueMin, friendToSpawn.stayValueMax);
+        newObject = Instantiate(friendToSpawn, transform.position, Quaternion.identity);
         
         Destroy(this.gameObject); 
     }
