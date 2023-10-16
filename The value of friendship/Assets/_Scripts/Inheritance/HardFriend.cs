@@ -2,19 +2,24 @@ using UnityEngine;
 
 public class HardFriend : People
 {
-    //Should pass in stranger's location when creating new friend
-    HardFriend(Vector3 strangerLocation)
+    public static float stayTimeValueMin = 25.0f;
+    public static float stayTimeValueMax = 40.0f;
+    public static float multiplier = 1.2f;
+
+    HardFriend(Vector3 strangerLocation, float randomValue)
     {
         this.location = strangerLocation;
-        this.stayTimeValue = Random.Range(25f, 40f);
-        this.multiplier = 3.0f;
+        this.stayTimeValue = randomValue;
+    }
+
+    HardFriend(float randomValue)
+    {
+        this.stayTimeValue = randomValue;
     }
 
     HardFriend()
     {
-        this.location = new Vector3();
-        this.stayTimeValue = Random.Range(25f, 40f);
-        this.multiplier = 1.2f;
+        this.stayTimeValue = 30.0f; //Temporary solution
     }
 
     private void Update()
