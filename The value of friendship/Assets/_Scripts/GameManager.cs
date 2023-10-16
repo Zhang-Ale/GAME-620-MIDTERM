@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public float timerDuration = 360f;
     public float XP = 0f;
     public GameObject video;
-    public GameObject gameOver;
+    public GameObject gameOver, shadeScreen;
     public bool _gameOver;
 
     public PlayerController player;
@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         if(timer == 0)
         {
             gameOver.SetActive(true);
+            shadeScreen.SetActive(true); 
             _gameOver = true; 
         }
     }
