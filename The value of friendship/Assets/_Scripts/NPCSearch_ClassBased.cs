@@ -33,4 +33,12 @@ public class NPCSearch_ClassBased : MonoBehaviour
         currentState = currentState.DoState(this);
         currentStateName = currentState.ToString();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //Change this object to a friend
+        }
+    }
 }
