@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
 {
     private Vector3 vector;
     public GameObject lifeXPObject;
+    public GameObject strangers;
     public GameObject objects;
     public GameObject wall1;
     public GameObject wall;
     public const int numObjects = 2000;
+    public const int numStrangers = 20;
     public float timer = 0f;
     public float timerDuration = 360f;
     public int XP = 0;
@@ -35,6 +37,12 @@ public class GameManager : MonoBehaviour
             vector = new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0);
             objects = Instantiate(lifeXPObject, vector, Quaternion.identity);
             wall = Instantiate(wall1, -vector, Quaternion.identity);
+        }
+
+        for (int i = 0; i < numStrangers; ++i)
+        {
+            vector = new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0);
+            objects = Instantiate(strangers, vector, Quaternion.identity);
         }
     }
 
