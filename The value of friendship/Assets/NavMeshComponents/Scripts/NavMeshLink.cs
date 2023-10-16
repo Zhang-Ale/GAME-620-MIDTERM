@@ -1,14 +1,17 @@
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+using NavMeshPlus.Extensions;
 
-namespace UnityEngine.AI
+namespace NavMeshPlus.Components
 {
     [ExecuteInEditMode]
     [DefaultExecutionOrder(-101)]
-    [AddComponentMenu("Navigation/NavMeshLink", 33)]
-    [HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
+    [AddComponentMenu("Navigation/Navigation Link", 33)]
+    [HelpURL("https://github.com/Unity-Technologies/NavMeshPlus#documentation-draft")]
     public class NavMeshLink : MonoBehaviour
     {
-        [SerializeField]
+        [SerializeField, NavMeshAgent]
         int m_AgentTypeID;
         public int agentTypeID { get { return m_AgentTypeID; } set { m_AgentTypeID = value; UpdateLink(); } }
 
@@ -36,7 +39,7 @@ namespace UnityEngine.AI
         bool m_AutoUpdatePosition;
         public bool autoUpdate { get { return m_AutoUpdatePosition; } set { SetAutoUpdate(value); } }
 
-        [SerializeField]
+        [SerializeField, NavMeshArea]
         int m_Area;
         public int area { get { return m_Area; } set { m_Area = value; UpdateLink(); } }
 

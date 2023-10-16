@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using UnityEngine;
+using NavMeshPlus.Extensions;
 
-namespace UnityEngine.AI
+namespace NavMeshPlus.Components
 {
     [ExecuteInEditMode]
-    [AddComponentMenu("Navigation/NavMeshModifierVolume", 31)]
+    [AddComponentMenu("Navigation/Navigation ModifierVolume", 31)]
     [HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
     public class NavMeshModifierVolume : MonoBehaviour
     {
@@ -15,7 +17,7 @@ namespace UnityEngine.AI
         Vector3 m_Center = new Vector3(0, 1.0f, 0);
         public Vector3 center { get { return m_Center; } set { m_Center = value; } }
 
-        [SerializeField]
+        [SerializeField, NavMeshArea]
         int m_Area;
         public int area { get { return m_Area; } set { m_Area = value; } }
 

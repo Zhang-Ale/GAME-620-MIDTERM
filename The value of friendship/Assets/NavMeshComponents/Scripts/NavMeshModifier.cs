@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using UnityEngine;
+using NavMeshPlus.Extensions;
 
-namespace UnityEngine.AI
+namespace NavMeshPlus.Components
 {
     [ExecuteInEditMode]
-    [AddComponentMenu("Navigation/NavMeshModifier", 32)]
+    [AddComponentMenu("Navigation/Navigation Modifier", 32)]
     [HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
     public class NavMeshModifier : MonoBehaviour
     {
@@ -11,7 +13,7 @@ namespace UnityEngine.AI
         bool m_OverrideArea;
         public bool overrideArea { get { return m_OverrideArea; } set { m_OverrideArea = value; } }
 
-        [SerializeField]
+        [SerializeField, NavMeshArea]
         int m_Area;
         public int area { get { return m_Area; } set { m_Area = value; } }
 

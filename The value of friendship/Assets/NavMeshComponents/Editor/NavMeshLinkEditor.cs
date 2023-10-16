@@ -1,7 +1,10 @@
+using NavMeshPlus.Components;
+using UnityEditor;
+using UnityEditor.AI;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace UnityEditor.AI
+namespace NavMeshPlus.Editors.Components
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshLink))]
@@ -75,7 +78,7 @@ namespace UnityEditor.AI
         {
             serializedObject.Update();
 
-            NavMeshComponentsGUIUtility.AgentTypePopup("Agent Type", m_AgentTypeID);
+            EditorGUILayout.PropertyField(m_AgentTypeID);
             EditorGUILayout.Space();
 
             EditorGUILayout.PropertyField(m_StartPoint);
@@ -110,8 +113,7 @@ namespace UnityEditor.AI
             EditorGUILayout.PropertyField(m_CostModifier);
             EditorGUILayout.PropertyField(m_AutoUpdatePosition);
             EditorGUILayout.PropertyField(m_Bidirectional);
-
-            NavMeshComponentsGUIUtility.AreaPopup("Area Type", m_Area);
+            EditorGUILayout.PropertyField(m_Area);
 
             serializedObject.ApplyModifiedProperties();
 
@@ -265,7 +267,7 @@ namespace UnityEditor.AI
             Handles.color = oldColor;
         }
 
-        [MenuItem("GameObject/AI/NavMesh Link", false, 2002)]
+        [MenuItem("GameObject/Navigation/NavMesh Link", false, 2002)]
         static public void CreateNavMeshLink(MenuCommand menuCommand)
         {
             var parent = menuCommand.context as GameObject;

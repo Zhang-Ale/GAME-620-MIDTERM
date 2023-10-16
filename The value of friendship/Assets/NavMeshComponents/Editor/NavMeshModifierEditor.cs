@@ -1,7 +1,11 @@
+using NavMeshPlus.Components;
+using NavMeshPlus.Extensions;
+using UnityEditor;
+using UnityEditor.AI;
 using UnityEngine.AI;
 
-namespace UnityEditor.AI
-{
+namespace NavMeshPlus.Editors.Components
+{ 
     [CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshModifier))]
     class NavMeshModifierEditor : Editor
@@ -36,7 +40,7 @@ namespace UnityEditor.AI
             if (m_OverrideArea.boolValue)
             {
                 EditorGUI.indentLevel++;
-                NavMeshComponentsGUIUtility.AreaPopup("Area Type", m_Area);
+                EditorGUILayout.PropertyField(m_Area);
                 EditorGUI.indentLevel--;
             }
 
