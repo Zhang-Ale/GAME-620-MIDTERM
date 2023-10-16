@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -189,22 +189,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5004034, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 11452962, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
       propertyPath: gm
       value: 
       objectReference: {fileID: 1003498540}
-    - target: {fileID: 3411570622568089807, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
-      propertyPath: m_Name
-      value: FollowPos
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.043
       objectReference: {fileID: 0}
-    - target: {fileID: 4963012628181229929, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.043
       objectReference: {fileID: 0}
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000011921
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049494776523320192, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886156097471255522, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b519df9934cea2c47b71b1243cdc0e93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8efca73e7764e041b452b766d4e31cd, type: 3}
 --- !u!1 &136537438 stripped
@@ -1455,6 +1479,7 @@ MonoBehaviour:
   timerText: {fileID: 1227422919}
   mainMusicObject: {fileID: 963194225}
   mainMusic: {fileID: 963194230}
+  totalMultiplier: 0
 --- !u!4 &1003498541
 Transform:
   m_ObjectHideFlags: 0
@@ -1704,7 +1729,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fee49d7f7376f274d8fd7ee6d9558791, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
