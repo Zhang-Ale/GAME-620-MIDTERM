@@ -17,7 +17,7 @@ public class EasyGoingPerson : People
         this.stayTimeValue = randomValue;
     }
 
-    EasyGoingPerson(float randomValue)
+    EasyGoingPerson()
     {
         this.stayTimeValue = 20.0f; //Temporary solution
     }
