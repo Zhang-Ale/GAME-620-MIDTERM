@@ -74,4 +74,14 @@ public class PlayerController : MonoBehaviour
             body2D.gravityScale = 0.0f;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "LifeXPSphere")
+        {
+            gm.XP+= 10;
+            //do something flashy maybe?
+            Destroy(collision.gameObject);
+        }
+    }
 }

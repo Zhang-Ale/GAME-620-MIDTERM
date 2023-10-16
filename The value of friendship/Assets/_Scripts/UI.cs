@@ -16,13 +16,6 @@ public class UI : MonoBehaviour
     private int seconds;
     private string secondsString;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         intTimer = (int)gm.timer;

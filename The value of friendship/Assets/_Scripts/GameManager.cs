@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -11,11 +12,13 @@ public class GameManager : MonoBehaviour
     public GameObject objects;
     public GameObject wall1;
     public GameObject wall;
-    public const int numObjects = 2000;
+    public BackgroundColor BC; 
+    public const int numObjects = 500;
     public const int numStrangers = 1000;
     public float timer = 0f;
     public float timerDuration = 360f;
     public float XP = 0f;
+    public GameObject video; 
 
     public PlayerController player;
     public UI ui;
@@ -54,5 +57,11 @@ public class GameManager : MonoBehaviour
     {
         if (timer > 0)
             timer -= Time.deltaTime;
+
+        if (timer > 45)
+        {
+            BC.changeCol = false;
+            video.SetActive(true);
+        }
     }
 }
