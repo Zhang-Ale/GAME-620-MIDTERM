@@ -35,7 +35,7 @@ public class UI : MonoBehaviour
             secondsString = '0' + seconds.ToString("0");
 
         timerDisplay.text = minutes.ToString("0") + ':' + secondsString;
-        XPDisplay.text = "XP: " + gm.XP.ToString("0");
+        XPDisplay.text = "XP: " + gm.XP.ToString("F");
 
         //if (gm.timer <= 0)
         {
