@@ -16,4 +16,10 @@ public class EasyGoingPerson : People
         this.stayTimeValue = Random.Range(10f, 30f);
         this.multiplier = 1.1f;
     }
+
+    private void Update()
+    {
+        Transform playerTrans = GameObject.Find("FollowPos").transform;
+        SetParent(playerTrans);
+    }
 }

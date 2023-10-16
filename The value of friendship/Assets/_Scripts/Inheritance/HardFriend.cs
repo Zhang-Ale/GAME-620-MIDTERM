@@ -16,4 +16,10 @@ public class HardFriend : People
         this.stayTimeValue = Random.Range(25f, 40f);
         this.multiplier = 1.2f;
     }
+
+    private void Update()
+    {
+        Transform playerTrans = GameObject.Find("FollowPos").transform;
+        SetParent(playerTrans); 
+    }
 }
