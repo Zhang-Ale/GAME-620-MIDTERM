@@ -25,6 +25,10 @@ public class FollowTarget : MonoBehaviour
             //ignore player's and friends' collision
         }
 
-        //upon touching the player, ignore 
+        //upon touching the player, change tag from Stranger to Friend
+        //ignore strangers' collision
+
+        //upon leaving the player, change tag from Friend to Stranger
+        //start checking player's and friends' and other strangers' collision
     }
 }
